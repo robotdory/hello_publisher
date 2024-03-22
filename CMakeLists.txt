@@ -40,7 +40,6 @@ add_library(hello_publisher ${ADD_SRC})
 target_include_directories(hello_publisher PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
     $<INSTALL_INTERFACE:include>)
-    
 ament_target_dependencies(hello_publisher ${ADD_DEP})
 add_executable(hello src/hello_publisher_node.cpp)
 target_link_libraries(hello hello_publisher)
