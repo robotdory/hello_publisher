@@ -27,30 +27,32 @@
 #include "std_msgs/msg/bool.hpp"
 #include "std_msgs/msg/string.hpp"
 
-namespace hello_publisher {
-class HelloPublisher : public rclcpp::Node {
- public:
-  explicit HelloPublisher(const std::string& node_name);
+namespace hello_publisher
+{
+  class HelloPublisher : public rclcpp::Node
+  {
+  public:
+    explicit HelloPublisher(const std::string &node_name);
 
-  virtual ~HelloPublisher();
+    virtual ~HelloPublisher();
 
- private:
-  rclcpp::TimerBase::SharedPtr publish_info_timer_;
-  rclcpp::TimerBase::SharedPtr publish_heartbeat_timer_;
+  private:
+    rclcpp::TimerBase::SharedPtr publish_info_timer_;
+    rclcpp::TimerBase::SharedPtr publish_heartbeat_timer_;
 
-  rclcpp::Publisher<std_msgs::msg::String>::SharedPtr hello_publisher_;
-  rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr heartbeat_publisher_;
+    rclcpp::Publisher<std_msgs::msg::String>::SharedPtr hello_publisher_;
+    rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr heartbeat_publisher_;
 
-  size_t message_count_;
-  /**
-   * @brief Topic과 Heartbeat를 Publish하는 함수
-   *
-   */
-  void publish_info();
+    size_t message_count_;
+    /**
+     * @brief Topic과 Heartbeat를 Publish하는 함수
+     *
+     */
+    void publish_info();
 
-  void publish_heartbeat();
-};
+    void publish_heartbeat();
+  };
 
-}  // namespace hello_publisher
+} // namespace hello_publisher
 
-#endif  // HELLO_PUBLISHER__HELLO_PUBLISHER_HPP_
+#endif // HELLO_PUBLISHER__HELLO_PUBLISHER_HPP_

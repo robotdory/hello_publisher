@@ -57,10 +57,17 @@ namespace hello_publisher
     hello_publisher_->publish(hello_msg);
   }
 
-  void HelloPublisher::publish_heartbeat()
+  void HelloPublisher::         
+  
+  
+  
+  
+  
+  publish_heartbeat()
   {
     auto heartbeat = std_msgs::msg::Bool();
     heartbeat.data = true;
     heartbeat_publisher_->publish(heartbeat);
   }
-} // namespace hello_publisher
+
+} //   namespace hello_publisher
