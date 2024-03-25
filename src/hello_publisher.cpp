@@ -35,7 +35,7 @@ HelloPublisher::HelloPublisher(const std::string & node_name)
   hello_publisher_ =
     create_publisher<std_msgs::msg::String>("/hello", qos_profile);
   heartbeat_publisher_ =
-    create_publisher<std_msgs::msg::Bool>("/heartbeat", qos_profile);
+    create_publisher<std_msgs::msg::Bool>("/heartbeat/hello_publisher", qos_profile);
 
   publish_heartbeat_timer_ = this->create_wall_timer(
     500ms, std::bind(&HelloPublisher::publish_heartbeat, this));

@@ -9,7 +9,7 @@
   <author email="kimth@robotis.com">Tae-Hyeon KIM</author>
 
   <buildtool_depend>ament_cmake_ros</buildtool_depend>
-  <depend>rclcpp</depend> 
+  <depend>rclcpp</depend>
   <depend>rcutils</depend>
   <depend>std_msgs</depend>
   <depend>sensor_msgs</depend>

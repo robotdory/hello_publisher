@@ -44,12 +44,17 @@ private:
   rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr heartbeat_publisher_;
 
   size_t message_count_;
-/**
- * @brief Topic과 Heartbeat를 Publish하는 함수
- *
- */
+
+  /**
+   * @brief Topic과 Heartbeat를 Publish하는 함수
+   *
+   */
   void publish_info();
 
+  /**
+   * @brief 노드의 생존 여부에 대해 Publish하는 함수
+   *
+   */
   void publish_heartbeat();
 };
 
