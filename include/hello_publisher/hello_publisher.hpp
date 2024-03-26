@@ -24,7 +24,7 @@
 #include <vector>
 
 #include "rclcpp/rclcpp.hpp"
-#include "std_msgs/msg/bool.hpp"
+#include "std_msgs/msg/empty.hpp"
 #include "std_msgs/msg/string.hpp"
 
 namespace hello_publisher
@@ -41,7 +41,7 @@ private:
   rclcpp::TimerBase::SharedPtr publish_heartbeat_timer_;
 
   rclcpp::Publisher<std_msgs::msg::String>::SharedPtr hello_publisher_;
-  rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr heartbeat_publisher_;
+  rclcpp::Publisher<std_msgs::msg::Empty>::SharedPtr heartbeat_publisher_;
 
   size_t message_count_;
 
