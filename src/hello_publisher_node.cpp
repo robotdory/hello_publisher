@@ -32,9 +32,7 @@ int main(int argc, char ** argv)
 
   // State Manger
   auto main_node = std::make_shared<hello_publisher::HelloPublisher>("hello_publisher_node");
-
   executor->add_node(main_node->get_node_base_interface());
-
   executor->spin();
   return 0;
 }
